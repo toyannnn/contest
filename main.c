@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "func/read.h"
-#include "func/work.h"
+#include "read.h"
+#include "work.h"
 int main(int arg_num, char* arg[]) {
     if (arg_num == 1) {
         puts("no parameters");
