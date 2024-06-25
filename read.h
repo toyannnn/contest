@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "func/work.h"
+#include "work.h"
 struct CommandPair {
     char long_form[20];
     char short_form[4];
