@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include "read.h"
 #include "work.h"
+//подключение необходимых библиотек
 int main(int arg_num, char* arg[]) {
     if (arg_num == 1) {
         puts("no parameters");
@@ -21,10 +22,11 @@ int main(int arg_num, char* arg[]) {
         "-s", "--size",
         "-h", "--help",
     };
+    
         const char* params_storage[] = { /* ... */ };
         const int params_storage_length = 20;
-        int params_count = countParams(arg_num, arg);
-        Param* entered_params = parametersReader(params_count, arg, params_storage_length, params_storage);
+        int params_count = countParams(arg_num, arg);  //вызов функции для подсчета количества параметров
+        Param* entered_params = parametersReader(params_count, arg, params_storage_length, params_storage);   //вызов функции для чтения и обработки введенных параметров
         void printMenu();
         int running = 1;
         while (running) {
@@ -35,9 +37,9 @@ int main(int arg_num, char* arg[]) {
                 running = 0;
                 continue;
             }
-            switch (command[0]) {
+            switch (command[0]) {  //обработка первого символа введенной команды
             case '-':
-                switch (command[1]) {
+                switch (command[1]) {   //обработка второго символа команды
                 case 'c':
                     createArchive(char* archiveName, int fileCount, char* fileNames[]);
                     break;
@@ -75,7 +77,7 @@ int main(int arg_num, char* arg[]) {
             printf("Do you want to continue? (1/0): ");
             scanf("%d", &running);
         }
-        free(entered_params);
+        free(entered_params); //освобождение памяти, выделенной для параметров
         return 0;
     }
 }
