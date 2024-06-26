@@ -4,7 +4,7 @@
 
 # Команда 11:
 
-# YouTrack:
+# YouTrack:https://salomatindmitriy.youtrack.cloud/projects/2c67a8dc-fe3a-4239-87a0-697c4b10cb97
 
 Участники команды:
 - Жданов Андрей - 4.309
